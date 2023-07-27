@@ -11,6 +11,11 @@ if (JSON.parse(localStorage.getItem('memes'))) {
 
 
 //////////////////
+// HELPER FUNCS //
+//////////////////
+
+
+//////////////////
 ////// PAGE //////
 //////////////////
 document.addEventListener('DOMContentLoaded', () => {
@@ -55,6 +60,28 @@ document.addEventListener('DOMContentLoaded', () => {
     //save to local storage
   });
 
+  //delete a meme
+  const memes = document.querySelectorAll('.meme');
+  memes.forEach(meme => {
 
+    meme.addEventListener('click', (event) => {
+
+      if (event.target.classList[0] === 'delete') {
+        meme.remove();
+      };
+
+    });
+
+  });
+
+  //clear all memes
+  const clear = document.querySelector('#clear');
+  clear.addEventListener('click', (event) => {
+
+    for (const meme of memes) {
+      meme.remove();
+    }
+
+  })
 
 });
