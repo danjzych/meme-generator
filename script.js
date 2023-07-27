@@ -56,12 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.reset();
     event.preventDefault();
+    memes = document.querySelectorAll('.meme');
 
     //save to local storage
   });
 
   //delete a meme
-  const memes = document.querySelectorAll('.meme');
+  var memes = document.querySelectorAll('.meme');
   memes.forEach(meme => {
 
     meme.addEventListener('click', (event) => {
@@ -80,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (const meme of memes) {
       meme.remove();
-    }
+    };
 
   })
 
