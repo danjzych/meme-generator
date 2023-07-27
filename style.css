@@ -1,0 +1,182 @@
+/* Global Styles + Layout */
+:root {
+  --prussian: #003049;
+  --fireengine: #D62828;
+  --orangewheel: #F77F00;
+  --xanthous: #FCBF49;
+  --vanilla: #EAE2B7;
+}
+
+@font-face {
+  font-family: Brookes;
+  src: url('./resources/Brookes.ttf')
+}
+
+html {
+  font-size: 16px;
+  text-align: center;
+  color: var(--prussian);
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  width: 100%;
+  background-image: linear-gradient(to right, var(--xanthous), var(--vanilla))
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template: repeat(5, 1fr) / repeat(3, 1fr);
+  height: 100vh;
+}
+
+header, h2, label {
+  font-family: 'Brookes';
+}
+
+.roundBorder {
+  border-radius: 1.5rem;
+}
+
+.createMeme {
+  margin: .25rem .25rem;
+  grid-area: 2 / 1 / 3 / 4;
+  border-right: 3px solid var(--prussian);
+  border-bottom: 1.5px solid var(--prussian);
+}
+
+.memes {
+  grid-area: 3 / 1 / 6 / 4;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow-y: scroll;
+  height: 90%;
+}
+
+/* header styles */
+header {
+  grid-area: 1 / 1 / 2 / 4;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} header h1 {
+  font-size: 4rem;
+  background: -webkit-linear-gradient(var(--fireengine), var(--orangewheel));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 2rem;
+} header a {
+  text-decoration: none;
+  color: var(--prussian)
+} header a:hover {
+  opacity: 0.5;
+  text-decoration: underline;
+} header a:active {
+  color: var(--orangewheel);
+  text-decoration: none;
+} header p {
+  font-size: 1.125rem;
+  padding-right: 2rem;
+}
+
+/* create meme form */
+h2 {
+  margin-bottom: .8rem;
+}
+form {
+  display: grid;
+  grid-template: 1fr / repeat(3, 1fr);
+} #addText {
+  grid-area: 1 / 1 / 1 / 2;
+} #addImage {
+  grid-area: 1 / 2 / 1 / 3;
+} #buttons {
+  grid-area: 1 / 3 / 1 / 4;
+}
+
+label {
+  font-size: 1.25rem;
+}
+
+input {
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--vanilla);
+  color: var(--prussian);
+} input::placeholder {
+  color: var(--prussian);
+  opacity: .75;
+}
+
+form p {
+  font-size: .75rem;
+  font-style: italic;
+  opacity: .5;
+  margin-top: 1.125rem;
+}
+
+button {
+  font-family: 'Rubik', sans-serif;
+  display: block;
+  margin: 1rem auto;
+} button[type=submit] {
+  background-image: linear-gradient(to right, var(--xanthous), var(--vanilla))
+} #clear {
+  background-image: linear-gradient(to right, maroon, var(--fireengine));
+  color: var(--vanilla);
+}
+
+/* to-do's*/
+.meme {
+  margin: 3rem 1rem 1rem 1rem;
+  position: relative;
+  max-width: 15rem;
+  max-height: 15rem;
+  width: auto;
+  height: auto;
+} .meme:hover {
+  cursor: crosshair;
+  box-shadow: 0 8px 16px 0 var(--prussian);
+}
+
+img {
+  max-width: inherit;
+  max-height: inherit;
+  object-fit: scale-down;
+}
+
+.memeText {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 1.35rem;
+  color: white;
+  text-shadow: 1px 1px 4px var(--prussian);
+  margin: 0;
+  position: absolute;
+  max-width: inherit;
+  max-height: inherit;
+} .top {
+  top: 5px;
+  left: 10px;
+} .bottom {
+  bottom: 0px;
+  left: 10px;
+} .delete {
+  position: absolute;
+  margin: 0;
+  top: 5px;
+  right: 5px;
+} .delete:hover {
+  cursor: default;
+  opacity: .5;
+  font-size: 1.25rem;
+} .delete:active {
+  opacity: 1;
+  color: var(--fireengine);
+  text-shadow: 3px 3px 4px var(--prussian);
+}

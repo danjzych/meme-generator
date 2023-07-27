@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iNeedMemes!!!</title>
+  <script src="./script.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>iNeedMemes.com</h1>
+    <a href=""><p>SEE MORE MEMES!!</p></a>
+  </header>
+  <div class="createMeme">
+    <h2>Create A Meme!!</h2>
+      <form>
+        <div id="addText">
+          <label>Add Text</label>
+          <input placeholder="Add Top Text" minlength="1" maxlength="100" class="roundBorder" id="topText">
+          <input placeholder="Add Bottom Text" minlength="1" maxlength="100" class="roundBorder" id="bottomText">
+        </div>
+        <div id="addImage">
+          <label>Add Image</label>
+          <input placeholder="Add Image URL" minlength="1"  class="roundBorder" id="URL" type="url">
+          <p>URL must link directly to image.</p>
+        </div>
+        <div id="buttons">
+          <label>Meme Functions</label>
+          <button class="roundBorder" type="submit">Save Meme</button>
+          <button class="roundBorder" id ='clear'>CLEAR ALL MEMES</button>
+        </div>
+      </form>
+  </div>
+  <div class="memes">
+    <h2 class="'transparentBackground">Your Memes!!</h2>
+    <div class="container">
+      <div class="meme">
+        <img src="https://imgflip.com/s/meme/Philosoraptor.jpg" />
+        <p class="memeText top">I love to make memes</p>
+        <p class="memeText bottom ">but not too big!!</p>
+        <p class="delete">X</p>
+      </div>
+      <div class="meme">
+        <img src="./resources/img/Drake-Hotline-Bling.jpg" />
+        <p class="memeText top">I love to make memes</p>
+        <p class="memeText bottom ">but not too big!!</p>
+        <p class="delete">X</p>
+      </div>
+      <div class="meme">
+        <img src="./resources/img/b1f.jpg" />
+        <p class="memeText top">I love to make memes</p>
+        <p class="memeText bottom ">but not too big!!</p>
+        <p class="delete">X</p>
+      </div>
+      <div class="meme">
+        <img src="https://imgflip.com/s/meme/Philosoraptor.jpg" />
+        <p class="memeText top">I love to make memes</p>
+        <p class="memeText bottom ">but not too big!!</p>
+        <p class="delete">X</p>
+      </div>
+      <div class="meme">
+        <img src="./resources/img/Drake-Hotline-Bling.jpg" />
+        <p class="memeText top">I love to make memes</p>
+        <p class="memeText bottom ">but not too big!!</p>
+        <p class="delete">X</p>
+      </div>
+      <div class="meme">
+        <img src="./resources/img/b1f.jpg" />
+        <p class="memeText top">I love to make memes</p>
+        <p class="memeText bottom ">but not too big!!</p>
+        <p class="delete">X</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
