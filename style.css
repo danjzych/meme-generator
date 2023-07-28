@@ -17,7 +17,6 @@ html {
   text-align: center;
   color: var(--prussian);
   font-family: 'Rubik', sans-serif;
-  text-align: center;
   width: 100%;
   background-image: linear-gradient(to right, var(--xanthous), var(--vanilla))
 }
@@ -125,8 +124,13 @@ button {
   font-family: 'Rubik', sans-serif;
   display: block;
   margin: 1rem auto;
+  cursor: pointer;
 } button[type=submit] {
   background-image: linear-gradient(to right, var(--xanthous), var(--vanilla))
+} button:hover{
+  box-shadow: .25rem .35rem 1rem 1px var(--prussian);
+} button:active {
+  box-shadow: .1rem .01rem .1rem 1px var(--prussian);
 } #clear {
   background-image: linear-gradient(to right, maroon, var(--fireengine));
   color: var(--vanilla);
@@ -134,47 +138,44 @@ button {
 
 /* to-do's*/
 .meme {
-  margin: 3rem 1rem 1rem 1rem;
+  margin: auto;
   position: relative;
   max-width: 15rem;
-  max-height: 15rem;
-  width: auto;
-  height: auto;
   border-radius: .5rem;
+  text-align: center;
 } .meme:hover {
   cursor: crosshair;
-  box-shadow: 0 8px 16px 0 var(--prussian);
 }
 
 img {
   max-width: inherit;
-  max-height: inherit;
-  object-fit: scale-down;
   border-radius: inherit;
+  margin: 0;
+  box-shadow: .1rem .5rem 1rem 1px var(--prussian);
+} img:hover {
+  box-shadow: .4rem 1rem 1rem 1px var(--prussian);
 }
 
 .memeText {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 1.35rem;
-  text-align: center;
   text-transform: uppercase;
   color: white;
   text-shadow: 1px 1px 4px var(--prussian);
-  margin: 0;
+  margin: .25rem;
   position: absolute;
-  max-width: inherit;
-  max-height: inherit;
+  left: 0;
+  right: 0;
 } #top {
-  top: 5px;
-  left: 10px;
+  top: 0;
 } #bottom {
-  bottom: 5px;
-  left: 10px;
+  bottom: 0;
 } .delete {
   position: absolute;
   margin: 0;
   top: 5px;
   right: 5px;
+  z-index: 100000;
 } .delete:hover {
   cursor: default;
   opacity: .5;
