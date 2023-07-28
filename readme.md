@@ -14,3 +14,5 @@ These features may be added back in the future:
 - Edit saved memes
 - Export saved memes as image file
 - Generate link to share a meme
+
+Font 'brookeshappel8' is used under *Freeware, Non-Commercial* license from user 'Brooke', found at https://www.fontspace.com/brookeshappell8-font-f15898.
