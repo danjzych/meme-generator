@@ -140,6 +140,7 @@ button {
   max-height: 15rem;
   width: auto;
   height: auto;
+  border-radius: .5rem;
 } .meme:hover {
   cursor: crosshair;
   box-shadow: 0 8px 16px 0 var(--prussian);
@@ -149,22 +150,25 @@ img {
   max-width: inherit;
   max-height: inherit;
   object-fit: scale-down;
+  border-radius: inherit;
 }
 
 .memeText {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 1.35rem;
+  text-align: center;
+  text-transform: uppercase;
   color: white;
   text-shadow: 1px 1px 4px var(--prussian);
   margin: 0;
   position: absolute;
   max-width: inherit;
   max-height: inherit;
-} .top {
+} #top {
   top: 5px;
   left: 10px;
-} .bottom {
-  bottom: 0px;
+} #bottom {
+  bottom: 5px;
   left: 10px;
 } .delete {
   position: absolute;
